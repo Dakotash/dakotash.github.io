@@ -7,7 +7,7 @@ body {
     display:flex;
     padding: 10px;
     margin: 10px;
-    background: lightgray;
+    background: rgb(224, 202, 0);
 }
 
 .assignment img {
