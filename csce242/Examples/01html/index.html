@@ -1,41 +1,69 @@
-<!-- Defines the document type and version of HTML -->
-<!DOCTYPE html>
+<!DOCTYPE html>  <!-- Defines the document type and version of HTML -->
 
-<!-- Opens the HTML document -->
-<html>
+<html> <!-- Opens the HTML document -->
 
-    <!-- Head section: contains metadata and the title of the page -->
-    <head>
-        <!-- Title that appears in the browser tab -->
-        <title>Puppies</title>
+    <head> <!-- Head section: contains metadata and the title of the page -->
+        <title>Puppies Page</title> <!-- Title that appears in the browser tab -->
+        <link rel="stylesheet" href="styles.css">
     </head>
 
-    <!-- Body section: contains the content visible on the webpage -->
-    <body>
-        <!-- Main heading of the page -->
-        <h1>Puppies are everywhere</h1>
 
-        <!-- Subheading -->
-        <h2>Info about Puppies</h2>
+    <body> <!-- Body section: contains the content visible on the webpage -->
+ <!-- h1 is Main heading of the page -->
+        <h1>Puppies are everywhere!</h1>
 
-        <!-- Paragraph with italic and bold styling -->
+        <h2>Info about Puppies</h2> <!-- h2 is Subheading -->
+
         <p>I <i>LOVE</i> puppies so much. They are my <strong>friends</strong> in fur.</p>
-        <!-- Another paragraph -->
+
         <p>I wish I was a puppy. </p>
 
-        <!-- Image of a puppy; the source points to a file in the "images" folder -->
-        <img src="images/shutterstock_1048123303-scaled.jpg">
+        <img src="images/shutterstock_1048123303-scaled.jpg" alt="Cute Puppies">
 
-        <!-- Sub-subheading introducing a list -->
         <h3>Things I know puppies love.</h3>
-
         <!-- Use an ordered list (<ol>) instead of an unordered list (<ul>) for numbered items -->
-      
-        <!-- Unordered list of things puppies love -->
+
+<!-- Unordered list of things puppies love -->
         <ul>
             <li>Toys</li>
             <li>Food</li>
             <li>Belly Rubs</li>
         </ul>
+        <p>
+            <a href="https://www.puppyspot.com/?srsltid=AfmBOopsJzgztBWPGDV5J1jTCi3gRv1USGe61CrGcZ-MUqEimXQojFWQ">
+                Learn More About Puppies
+            </a>
+        </p>
+        
+        <h3>Let's break down the Prices</h3>
+
+        <table>
+            <tr>
+                <th>Breed</th>
+                <th>Size</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Husky</td>
+                <td>Large</td>
+                <td>$2000</td>
+            </tr>
+            <tr>
+                <td>Lab</td>
+                <td>Large</td>
+                <td>$1000</td>
+            </tr>
+            <tr>
+                <td>Frenche</td>
+                <td>Small</td>
+                <td>$5000</td>
+            </tr>
+            <tr>
+                <td>Golden Retriever</td>
+                <td>Medium</td>
+                <td>$1500</td>
+            </tr>
+        </table>
+
     </body>
 </html>

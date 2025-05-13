@@ -1,0 +1,25 @@
+/*Structure*/
+body{
+    background:skyblue;
+}
+
+
+/* Tables */
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background: magenta;
+}
+
+td, th {
+    border: 1px solid magenta;
+    padding: 5px;
+}
+
+
+/* Typography aka Fonts */
+h1 {
+    color: green;
+}
