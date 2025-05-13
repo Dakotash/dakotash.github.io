@@ -1,0 +1,51 @@
+/* Golf-themed color palettes for me to use I found online */
+:root {
+    --fairway-green: #2d8c3c;
+    --deep-green: #195425;
+    --sand-beige: #e8d0a9;
+    --light-sand: #f5ebd8;
+    --sky-blue: #a7c7e7;
+    --white: #ffffff;
+    --wood-brown: #78552b;
+}
+
+/* Structure */
+body {
+    background: var(--light-sand);
+}
+
+/* Header styling */
+h1, h2 {
+    color: var(--deep-green);
+}
+
+
+/* Table styling */
+table {
+    border-collapse: collapse
+}
+
+th {
+    background: var(--fairway-green);
+    color: var(--white);
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid var(--sand-beige);
+}
+
+td, th {
+    border: 1px solid var(--deep-green);
+    padding: 5px;
+}
+
+
+
+/* Links styling */
+a {
+    color: var(--deep-green);
+}
+
