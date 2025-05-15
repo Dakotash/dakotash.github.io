@@ -10,6 +10,41 @@ body {
     padding-left: 20px;
 }
 
+footer {
+    text-align: center;
+    padding:5px;
+    margin:10px 0px;
+}
+
+
+/* ASSIGNMENTS GRID */
+.assignments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+.assignment {
+    width: 300px;
+    padding: 20px;
+    background-color: #111;
+    border-radius: 5px;
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 10px #00ff001a;
+}
+
+.assignment img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: 1px solid #00ff00;
+    margin: 10px auto;
+    display: block;
+}
+
 
 /* TYPOGRAPHY */
 body {
@@ -45,4 +80,66 @@ h3 {
     color: white; 
     background-color: darkgreen;
     padding: 2px; 
+}
+
+
+/* Media Queries */
+/* Portrait Tablet */
+@media screen and (min-width: 600px) {
+    
+}
+
+/* Landscape Tablet */
+@media screen and (min-width: 768px) {
+    header, footer, .main-area {
+        width:85%;
+        margin:10px auto;
+    }
+
+    /* Columns */
+    .columns {
+        display:flex;
+    }
+
+    .pic-area {
+        margin:0 10px 10px;
+    }
+
+    #gallery {
+        flex-wrap:wrap;
+        justify-content: space-around;
+    }
+
+    #gallery section {
+        max-width:20%;
+    }
+
+    .one {
+        flex:1;
+    }
+
+    .two {
+        flex:2;
+    }
+
+    .three {
+        flex:3;
+    }
+
+    .four {
+        flex:4;
+    }
+
+}
+
+/* Labtop / Desktop */
+@media screen and (min-width: 992px) {
+    header, footer, .main-area {
+        width:70%;
+    }
+}
+
+/* Extra Large Devices */
+@media screen and (min-width: 1600px) {
+    
 }
