@@ -1,3 +1,48 @@
+
+/* STRUCTURE */
+body {
+    background-color: black;
+    margin: 20px; 
+}
+
+.assignment-list {
+    border-left: 3px solid lime; 
+    padding-left: 20px;
+}
+
+
+/* TYPOGRAPHY */
+body {
+    font-family: 'Courier New', monospace; 
+    color: limegreen; 
+}
+
 h1 {
-    color: green
+    color: lime;
+    text-shadow: 0 0 5px lime; 
+}
+
+h3 {
+    text-shadow: 0 0 3px lime; 
+    border-bottom: 1px dashed lime; 
+    padding-bottom: 5px;
+}
+
+#assignments {
+    color: lime;
+    border-bottom: 1px dashed lime; 
+    padding-bottom: 5px; 
+}
+
+
+/* NAVIGATION */
+.assignment-list a {
+    color: lime; 
+    text-decoration: none; 
+}
+
+.assignment-list a:hover {
+    color: white; 
+    background-color: darkgreen;
+    padding: 2px; 
 }
