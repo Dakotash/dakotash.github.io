@@ -1,3 +1,12 @@
+/* COMMENT FROM CLASS: */ 
+/* : for a mobile device fisrt then work your way up */
+/* : If you want items to go to the right or left you apply "Flex" (you mostly do this on larger screens only) */
+/* : changes are hierarchal and apply to childern */
+/* can use " flex: 20% " or " flex: 80% " instead of " flex:1; " */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+
 /* Structure */
 body {
     font-family: Arial, Helvetica, sans-serif;
