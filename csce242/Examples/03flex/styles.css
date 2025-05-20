@@ -4,8 +4,9 @@
 /* : changes are hierarchal and apply to childern */
 /* can use " flex: 20% " or " flex: 80% " instead of " flex:1; " */
 /* ------------------------------------------------------------------------------------------------------------ */
-
-
+/* Notes From Class 5/19/25 */
+/* We postition static and postioin relative (still takes up space in markup) and postion absolute (it's absolute to the upper left of the screen and dosen't take up space in markup)*/
+/* absolute positioning starts at top left of screen but dosen't take up space in markup */
 
 /* Structure */
 body {
@@ -56,7 +57,23 @@ aside {
 img {
     max-width:100%;
 }
+header {
+    /* relative didn't change the look because we didn't use top, left, .. */
+    position: relative;
+    min-height: 150px;
+}
 
+#logo {
+    border: 2px solid gold;
+    position: absolute;
+    left: 50px;
+}
+
+#hello {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
 
 /* Navigation */
 
