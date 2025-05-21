@@ -1,0 +1,179 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    color:#fff;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+.container{
+    max-width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+/* header */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #640F0E; /* UofSc color */
+    padding: 10px;
+    color: white;
+    position: relative;
+    gap:15px;
+}
+
+.usc-logo{
+    width: 80px;
+}
+
+.main-nav {
+    margin:center;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#header-rightLogo {
+    display: flex;
+    gap: 20px;
+}
+
+.bottom-header{
+    background-color: #000000;
+    padding: 20px 50px;
+}
+
+.bottom-header ul {
+    display: flex;
+    gap: 20px;
+}
+
+.bottom-header ul li a {
+    color: #fff;
+}
+
+
+/* Banner */
+#banner{
+    background-image: url("images/swimming-background.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    padding:40px 0 100px;
+}
+
+.banner-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-text{
+    margin-bottom: 30px;
+}
+
+.banner-text span{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.banner-text h1{
+    font-size: 50px;
+    max-width: 50%;
+}
+
+#gallery{
+    background-color: #000000;
+    margin-top: -60px;
+    padding-bottom: 40px;
+}
+
+.banner-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns and equally dividing them equally */
+    gap: 20px;
+}
+
+
+/* Footer */
+footer{
+    background-color: #640F0E; /* UofSc color */
+    padding: 40px 0;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+footer ul{
+    display: flex;
+    gap: 30px;
+}
+footer ul li a{
+    color: white;
+    font-weight: bold;
+}
+.powered-by{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.powered-by span{
+    display: block;
+    width: 100%;
+}
+
+/* Landscape Tablet */
+@media screen and (min-width: 768px) {
+
+    .usc-logo{
+        width: 150px;
+    }
+
+    .top-header {
+        padding: 10px 20px;
+    }
+
+    #header-rightLogo {
+        gap: 100px;
+    }
+
+    .one {
+        flex:1;
+    }
+
+    .two {
+        flex:2;
+    }
+
+    .three {
+        flex:3;
+    }
+
+    .four {
+        flex:4;
+    }
+}
