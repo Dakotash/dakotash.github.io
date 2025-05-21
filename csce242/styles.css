@@ -1,18 +1,14 @@
-
 /* STRUCTURE */
 body {
     background-color: black;
     margin: 20px; 
 }
 
-
-
 footer {
     text-align: center;
     padding:5px;
     margin:10px 0px;
 }
-
 
 /* ASSIGNMENTS GRID */
 .assignments {
@@ -42,14 +38,19 @@ footer {
     display: block;
 }
 
-
 /* TYPOGRAPHY */
 body {
     font-family: 'Courier New', monospace; 
     color: limegreen; 
 }
 
-h1 {
+/* Fix: removed the dot before 'a' and made it apply to all anchor tags */
+a {
+    text-decoration: none;
+    color: lime; 
+}
+
+h1, h2 {
     color: lime;
     text-shadow: 0 0 5px lime; 
 }
@@ -66,7 +67,6 @@ h3 {
     padding-bottom: 5px; 
 }
 
-
 /* NAVIGATION */
 .assignment-list a {
     color: lime; 
@@ -79,6 +79,12 @@ h3 {
     padding: 2px; 
 }
 
+/* You might want to add this for consistency with your hover style */
+a:hover {
+    color: white; 
+    background-color: darkgreen;
+    padding: 2px; 
+}
 
 /* Media Queries */
 /* Portrait Tablet */
