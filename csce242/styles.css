@@ -44,7 +44,6 @@ body {
     color: limegreen; 
 }
 
-/* Fix: removed the dot before 'a' and made it apply to all anchor tags */
 a {
     text-decoration: none;
     color: lime; 
@@ -79,7 +78,6 @@ h3 {
     padding: 2px; 
 }
 
-/* You might want to add this for consistency with your hover style */
 a:hover {
     color: white; 
     background-color: darkgreen;

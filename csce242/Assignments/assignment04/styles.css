@@ -1,45 +1,53 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
-    color:#fff;
+    color: #fff;
 }
+
 ul {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 img {
     width: 100%;
 }
-.container{
+
+.container {
     max-width: 80%;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
 }
+
+
 
 /* header */
 .top-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #640F0E; /* UofSc color */
+    background-color: #640F0E;
+    /* UofSc color */
     padding: 10px;
     color: white;
     position: relative;
-    gap:15px;
+    gap: 15px;
 }
 
-.usc-logo{
+.usc-logo {
     width: 80px;
 }
 
 .main-nav {
-    margin:center;
+    margin: center;
 }
 
 .main-nav ul {
@@ -48,7 +56,6 @@ img {
     flex-wrap: wrap;
     gap: 20px;
 }
-
 
 .main-nav a {
     color: white;
@@ -62,13 +69,14 @@ img {
     gap: 20px;
 }
 
-.bottom-header{
+.bottom-header {
     background-color: #000000;
     padding: 20px 50px;
 }
 
 .bottom-header ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -77,36 +85,38 @@ img {
 }
 
 
+
 /* Banner */
-#banner{
+#banner {
     background-image: url("images/swimming-background.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position:center;
-    padding:40px 0 100px;
+    background-position: center;
+    padding: 40px 0 100px;
 }
 
-.banner-header{
-    display:flex;
+.banner-header {
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.banner-text{
+.banner-text {
     margin-bottom: 30px;
 }
 
-.banner-text span{
+.banner-text span {
     display: block;
     margin-bottom: 10px;
+    margin-top: 200px;
 }
 
-.banner-text h1{
+.banner-text h1 {
     font-size: 50px;
     max-width: 50%;
 }
 
-#gallery{
+#gallery {
     background-color: #000000;
     margin-top: -60px;
     padding-bottom: 40px;
@@ -114,34 +124,196 @@ img {
 
 .banner-gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns and equally dividing them equally */
+    grid-template-columns: 1fr 1fr;
+    /* 4 columns and equally dividing them equally */
     gap: 20px;
 }
 
-
-/* Footer */
-footer{
-    background-color: #640F0E; /* UofSc color */
-    padding: 40px 0;
+.gallery-item * {
+    margin-bottom: 10px;
 }
-.footer-content{
+
+
+
+/* Schedule */
+#schedule {
+    padding: 40px 0;
+    background-color: #EBEBEB;
+    color: #000000;
+}
+
+.schedule-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.schedule-header-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.schedule-presented {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.schedule-presented span {
+    display: block;
+    width: 100%;
+    min-width: 100px;
+}
+
+.schedule-header-right ul {
+    display: flex;
+    gap: 20px;
+}
+
+.schedule-header-right ul li a {
+    color: #000000;
+}
+
+.schedule-header-right ul .view-all a {
+    color: #640F0E;
+}
+
+.schedule-list-item {
+    margin-bottom: 10px;
+}
+
+.schedule-list-item-top {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.schedule-list-item-top .schedule-list-date {
+    background-color: #640F0E;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-top-left-radius: 10px;
+}
+
+.schedule-list-item-top-content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #fff;
+    width: 100%;
+    align-items: center;
+    padding: 15px 20px;
+    border-top-right-radius: 10px;
 }
-footer ul{
+
+.schedule-list-teams {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.schedule-list-teams img {
+    width: 55px;
+    height: 44px;
+}
+
+.schedule-list-location span {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.schedule-list-results strong {
+    display: block;
+    max-width: 110px;
+    font-size: 16px;
+}
+
+.schedule-list-item-bottom {
+    background-color: #F7F7F7;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.schedule-list-item-bottom ul {
     display: flex;
     gap: 30px;
 }
-footer ul li a{
+
+.schedule-list-item-bottom a {
+    color: #000000;
+}
+
+.schedule-list-item-bottom ul li a {
+    color: #640F0E;
+}
+
+
+
+/* headlines */
+#headlines {
+    padding: 40px 0;
+    background-color: #fff;
+    color: #000000;
+}
+
+.headlines-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 30px;
+}
+
+.headlines-header a {
+    color: #640F0E;
+}
+
+#headlines .gallery-item p {
+    color: #640F0E;
+}
+
+/* Footer */
+footer {
+    background-color: #640F0E;
+    /* UofSc color */
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+footer ul {
+    display: flex;
+    gap: 30px;
+}
+
+footer ul li a {
     color: white;
     font-weight: bold;
 }
-.powered-by{
+
+.powered-by {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-.powered-by span{
+
+.powered-by span {
     display: block;
     width: 100%;
 }
@@ -149,7 +321,7 @@ footer ul li a{
 /* Landscape Tablet */
 @media screen and (min-width: 768px) {
 
-    .usc-logo{
+    .usc-logo {
         width: 150px;
     }
 
@@ -162,18 +334,37 @@ footer ul li a{
     }
 
     .one {
-        flex:1;
+        flex: 1;
     }
 
     .two {
-        flex:2;
+        flex: 2;
     }
 
     .three {
-        flex:3;
+        flex: 3;
     }
 
     .four {
-        flex:4;
+        flex: 4;
     }
+
+    .banner-gallery {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* 4 columns and equally dividing them equally */
+    }
+
+    .schedule-list-item-top .schedule-list-date {
+        width: 120px;
+    }
+
+
+    .schedule-list-results strong {
+        font-size: 20px;
+    }
+
+    .schedule-list-teams {
+        margin-bottom: 0;
+    }
+
 }
