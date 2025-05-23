@@ -68,3 +68,13 @@ document.getElementById("txt-name").onkeyup = (event) => {
     const userName = event.target.value;
     document.getElementById("welcome-p").innerHTML = `Welcome ${userName}!`;
 }
+
+
+/* change happy and sad button */
+document.getElementById("btn-happy").onclick = () => {
+    const moodImage =  document.getElementById("image-mood");
+    moodImage.src ="images/happyf.png"
+    moodImage.classList.remove("hidden")
+    moodImage.classList.add("img-style")
+   
+}

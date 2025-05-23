@@ -1,14 +1,29 @@
+
+:root {
+    --bg-color: #FFB6C1;
+    --header-color: #8A2BE2;
+    --subheader-color: #FF6347;
+    --section-bg: #FFFACD;
+    --section-border: #87CEFA;
+    --text-color: #FF69B4;
+    --section-header: #FF8C00;
+    --button-bg: #DA70D6;
+    --button-text: white;
+    /* holy smokes that took way longer than I thought to take all the colors I previously had and turn them
+    all into variables because I forgot to label where each of them went */
+}
+
+
+/* structure */
 .parent-div{
-    background-color: #FFB6C1; 
-    padding: 20px;
-    height: 100vh;
-    margin: 0;
+    background-color: var(--bg-color); 
+    margin-bottom: 15%;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #FFB6C1;
+    background-color: var(--bg-color);
 }
 
 header{
@@ -18,17 +33,21 @@ header{
     align-items: center;
 }
 
+
+/* typography */
 h1{
-    color: #8A2BE2;
+    color: var(--header-color);
     font-size: 45px; 
     margin-bottom: 10px;
 }
 h2{
-    color: #FF6347; 
+    color: var(--subheader-color); 
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
+
+/* body */
 .flex-container{
     display: flex;
     justify-content: center;
@@ -37,8 +56,8 @@ h2{
 }
 
 .flex-section{
-    background-color: #FFFACD; 
-    border: 1px solid #87CEFA; 
+    background-color: var(--section-bg); 
+    border: 1px solid var(--section-border); 
     width: 300px;
     height: 250px; 
     display: flex;
@@ -59,7 +78,7 @@ h2{
 
 #ice-cream-sentence{
     margin: 5px;
-    color: #FF69B4; 
+    color: var(--text-color); 
 }
 
 #preview{
@@ -69,23 +88,30 @@ h2{
 }
 
 .section-header{
-    color: #FF8C00; 
+    color: var(--section-header); 
     margin-bottom: 15px; 
 }
 
 #img-press {
     padding: 8px 15px;
-    background-color: #DA70D6;
-    color: white;
+    background-color: var(--button-bg);
+    color: var(--button-text);
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer; /* got this from w3 schools... even though I want to say you may of mentioned a cursor pointer in class idk */
 }
 
 #slider {
     width: 100%;
     margin: 10px 0;
 }
+
+
+/* FOOTER */
+footer p{
+    text-align: center;
+}
+
 
 /* Media Queries */
 @media screen and (max-width: 599px) {

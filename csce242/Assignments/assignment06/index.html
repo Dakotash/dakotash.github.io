@@ -1,0 +1,95 @@
+<!--Dakota Hawkins CSCE242-->
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Conditionals</title>
+</head>
+
+<body>
+    <div id="content">
+        <header id="main-header">
+            <h1>Assignment 8</h1>
+            <h2>If Statements</h2>
+            <nav id="main-nav">
+                <div id="toggle" class="triangle-down"></div>
+                <ul id="nav-ul" class="columns hide-small">
+                    <li id="ex1-link"><a href="#">Exercise 1</a></li>
+                    <li id="ex2-link"><a href="#">Exercise 2</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content" class="columns">
+            <section id="ex1" class="columns hide-col one">
+                <div id="speed-box">
+                    <h2>Speeding</h2>
+                    <input type="range" min="1" max="10" value="5" class="slider" id="slider">
+                    <p id="speed-display">Position: 5</p>
+                    <div id="track">
+                        <div id="bike">
+
+ <!-- CODE TAKEN FROM: https://codingtorque.com/bicycle-illustration-using-html-and-css/ -->
+                                <div class="bicycle-container">
+                                    <div class="wheel back-wheel">
+                                        <div class="tire"></div>
+                                        <div class="rim"></div>
+                                        <div class="spokes"></div>
+                                        <div class="spokes"></div>
+                                        <div class="hub"></div>
+                                    </div>
+                                    <div class="wheel front-wheel">
+                                        <div class="tire"></div>
+                                        <div class="rim"></div>
+                                        <div class="spokes"></div>
+                                        <div class="spokes"></div>
+                                        <div class="hub"></div>
+                                    </div>
+                                    <div class="gear">
+                                        <div class="gear-red"></div>
+                                        <div class="tube pedal-tube"></div>
+                                        <div class="pedal"></div>
+                                    </div>
+                                    <div class="tube chain-tube"></div>
+                                    <div class="tube seat-tube-back"></div>
+                                    <div class="tube seat-tube-front"></div>
+                                    <div class="tube seat-tube-post"></div>
+                                    <div class="tube top-tube"></div>
+                                    <div class="tube top-handlebar-tube"></div>
+                                    <div class="tube top-handlebar-tube2"></div>
+                                    <div class="tube down-tube"></div>
+                                    <div class="tube head-tube"></div>
+                                    <div class="tube head-tube-post"></div>
+                                    <div class="saddle"></div>
+                                    <div class="handlebars"></div>
+                                </div>
+                                
+                        </div>
+                    </div>
+                    <button id="go-btn">Go</button>
+                </div>
+            </section>
+            <section id="ex2" class="columns hide-col one">
+                <div id="art-box">
+                    <h2>CSS Art</h2>
+                    <div id="button-box">
+                        <button class="art-btn" data-shape="moon">Moon</button>
+                        <button class="art-btn" data-shape="star">Star</button>
+                        <button class="art-btn" data-shape="cloud">Cloud</button>
+                    </div>
+                    <div id="art-display"></div>
+                </div>
+            </section>
+        </main>
+        <footer id="main-footer">
+            <p>&copy; Dakota Hawkins</p>
+        </footer>
+    </div>
+
+    <script src="js/exercise1.js"></script>
+    <script src="js/exercise2.js"></script>
+</body>
+
+</html>

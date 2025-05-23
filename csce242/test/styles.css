@@ -1,0 +1,362 @@
+/* Structure */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #ecf0f1;
+    --nav-color: #f39c12;
+    --border-color: #34495e;
+    --text-color: #ffffff;
+    --accent-color: #e74c3c;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, 'Source Code Pro Regular', sans-serif;
+    background: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    background: var(--secondary-color);
+    width: 90%;
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px;
+}
+
+#main-header {
+    background: var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid var(--border-color);
+}
+
+#main-content section {
+    background: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    position: static;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    min-height: 300px;
+}
+
+#main-footer {
+    text-align: center;
+    padding: 10px;
+    color: var(--border-color);
+}
+
+/* Toggle */
+#toggle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid var(--nav-color);
+    cursor: pointer;
+    margin: 10px auto;
+    transition: transform 0.3s ease;
+}
+
+#toggle.triangle-up {
+    transform: rotate(180deg);
+}
+
+/* Exercise 1 Speeding */
+#speed-box {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 950px;
+}
+
+#slider {
+    width: 90%;
+    max-width: 850px;
+    margin: 20px auto;
+    display: block;
+    accent-color: var(--accent-color);
+}
+
+#speed-display {
+    font-size: 1.2em;
+    margin: 15px 0;
+    color: var(--nav-color);
+}
+
+#track {
+    width: 100%;
+    max-width: 900px;
+    height: 150px;
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#bike {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    transition: left 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+#bike::before {
+    content: "🚲";
+    font-size: 24px;
+}
+
+#go-btn {
+    background: var(--nav-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+#go-btn:hover {
+    background: #e67e22;
+}
+
+/* Exercise 2 CSS Art */
+#art-box {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#button-box {
+    margin-bottom: 30px;
+}
+
+.art-btn {
+    background: var(--nav-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.art-btn:hover {
+    background: #e67e22;
+}
+
+#art-display {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--nav-color);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* CSS Art Shapes */
+.moon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #f1c40f;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.moon::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.star {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 70px solid #ffd700;
+    position: relative;
+    transform: rotate(35deg);
+}
+
+.star::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 70px solid #ffd700;
+    position: absolute;
+    left: -50px;
+    top: -45px;
+    transform: rotate(-70deg);
+}
+
+.star::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 70px solid #ffd700;
+    position: absolute;
+    left: -50px;
+    top: 3px;
+    transform: rotate(70deg);
+}
+
+.cloud {
+    width: 120px;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 60px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cloud::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 50%;
+    top: -20px;
+    left: 10px;
+}
+
+.cloud::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 50%;
+    top: -30px;
+    right: 15px;
+}
+
+/* Hide / Show */
+.hide-small {
+    display: none;
+}
+
+.hide-col {
+    display: none;
+}
+
+/* Navigation */
+#main-nav ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+#main-nav li {
+    padding: 10px;
+    margin: 5px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: var(--nav-color);
+    display: block;
+    cursor: pointer;
+}
+
+#main-nav a:hover {
+    color: var(--text-color);
+}
+
+/* Typography */
+h1,
+h2 {
+    color: var(--nav-color);
+    text-align: center;
+    margin: 10px 0;
+}
+
+p {
+    color: var(--nav-color);
+    text-align: center;
+}
+
+/* Media Query */
+@media only screen and (min-width: 600px) {
+    .columns {
+        display: flex;
+    }
+
+    .wrap {
+        flex-wrap: wrap;
+    }
+
+    .one {
+        flex: 1;
+    }
+
+    #main-nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #main-nav li {
+        flex: 1;
+        margin: 0 5px;
+        background: none;
+    }
+
+    #main-nav li:not(:last-child)::after {
+        content: "|";
+        color: var(--border-color);
+        margin-left: 15px;
+        font-weight: bold;
+    }
+
+    #toggle {
+        display: none;
+    }
+
+    .hide-small {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .hide-col {
+        display: none;
+    }
+}

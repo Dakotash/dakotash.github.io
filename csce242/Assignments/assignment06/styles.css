@@ -1,0 +1,634 @@
+/* Structure */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #ecf0f1;
+    --nav-color: #f39c12;
+    --border-color: #34495e;
+    --text-color: #ffffff;
+    --accent-color: #e74c3c;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, 'Source Code Pro Regular', sans-serif;
+    background: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    background: var(--secondary-color);
+    width: 90%;
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px;
+}
+
+#main-header {
+    background: var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid var(--border-color);
+}
+
+#main-content section {
+    background: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    position: static;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    min-height: 300px;
+}
+
+#main-footer {
+    text-align: center;
+    padding: 10px;
+    color: var(--border-color);
+}
+
+/* Toggle */
+#toggle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid var(--nav-color);
+    cursor: pointer;
+    margin: 10px auto;
+    transition: transform 0.3s ease;
+}
+
+#toggle.triangle-up {
+    transform: rotate(180deg);
+}
+
+/* Exercise 1 Speeding */
+#speed-box {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 950px;
+}
+
+#slider {
+    width: 90%;
+    max-width: 850px;
+    margin: 20px auto;
+    display: block;
+    accent-color: var(--accent-color);
+}
+
+#speed-display {
+    font-size: 1.2em;
+    margin: 15px 0;
+    color: var(--nav-color);
+}
+
+#track {
+    width: 100%;
+    max-width: 900px;
+    height: 150px;
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+/* Bike Design Source: Coding Torque bicycle CSS tutorial */
+#bike {
+    width: 120px;
+    height: 80px;
+    position: absolute;
+    top: 35px;
+    left: 10px;
+    transition: left 0.3s ease;
+    transform: scale(0.6);
+    transform-origin: bottom left;
+}
+
+/* Bicycle Container Styles */
+.bicycle-container {
+    position: relative;
+    width: 120px;
+    height: 80px;
+    overflow: visible;
+}
+
+.bicycle-container .wheel {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 3px 5px -4px rgba(0, 0, 0, 0.3);
+}
+
+.bicycle-container .wheel .tire {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    border: 3px solid #151515;
+    z-index: 2;
+}
+
+.bicycle-container .wheel .rim {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+    z-index: 1;
+}
+
+.bicycle-container .wheel .spokes {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 1px solid var(--accent-color);
+    z-index: 1;
+    animation: rt 2s infinite linear;
+    background: rgba(200, 100, 100, 0.1);
+}
+
+.bicycle-container .wheel .spokes:nth-of-type(3) {
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.bicycle-container .wheel .hub {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-color);
+}
+
+.bicycle-container .back-wheel {
+    left: 0;
+    top: 25px;
+}
+
+.bicycle-container .front-wheel {
+    right: 0;
+    top: 25px;
+}
+
+.bicycle-container .gear {
+    position: absolute;
+    top: 25px;
+    left: calc(40px + 13px);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #151515;
+    z-index: 4;
+    animation: rt 3s infinite linear;
+}
+
+.bicycle-container .gear .gear-red {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid var(--accent-color);
+}
+
+.bicycle-container .gear .pedal-tube {
+    position: absolute;
+    margin: auto;
+    top: -10px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    width: 7px;
+}
+
+.bicycle-container .gear .pedal {
+    position: absolute;
+    margin: auto;
+    top: -17px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 7px;
+    height: 2px;
+    background: var(--accent-color);
+    border-radius: 2px;
+    z-index: 3;
+}
+
+.bicycle-container .tube {
+    position: absolute;
+    height: 2px;
+    border-radius: 2px;
+    background: #151515;
+    z-index: 3;
+}
+
+.bicycle-container .chain-tube {
+    left: calc(40px / 2);
+    top: 35px;
+    width: 40px;
+}
+
+.bicycle-container .seat-tube-back {
+    left: calc(40px / 2);
+    top: 35px;
+    transform-origin: left;
+    transform: rotate(-60deg);
+    width: 40px;
+}
+
+.bicycle-container .seat-tube-front {
+    left: calc(40px / 2);
+    top: 35px;
+    transform-origin: right;
+    transform: rotate(60deg);
+    width: 40px;
+}
+
+.bicycle-container .seat-tube-post {
+    left: calc((40px / 2) - 7px);
+    top: 35px;
+    transform-origin: right;
+    transform: rotate(60deg);
+    background: var(--accent-color);
+    z-index: 1;
+    height: 1px;
+    width: 47px;
+}
+
+.bicycle-container .top-tube {
+    left: 40px;
+    top: 15px;
+    width: 38px;
+}
+
+.bicycle-container .top-handlebar-tube {
+    right: 37px;
+    top: 8px;
+    width: 7px;
+    background: var(--accent-color);
+}
+
+.bicycle-container .top-handlebar-tube2 {
+    right: 30px;
+    top: 8px;
+    width: 8px;
+    background: #151515;
+    border-radius: 0%;
+}
+
+.bicycle-container .down-tube {
+    left: calc(40px + 20px);
+    top: 35px;
+    width: 33px;
+    transform-origin: left;
+    transform: rotate(-50deg);
+}
+
+.bicycle-container .head-tube {
+    right: calc(40px / 2);
+    top: 35px;
+    transform-origin: right;
+    transform: rotate(60deg);
+    width: 40px;
+}
+
+.bicycle-container .head-tube-post {
+    right: calc(40px / 2);
+    top: 35px;
+    transform-origin: right;
+    transform: rotate(60deg);
+    width: 47px;
+    background: var(--accent-color);
+    z-index: 1;
+    height: 1px;
+}
+
+.bicycle-container .saddle {
+    position: absolute;
+    top: 7px;
+    left: 28px;
+    width: 17px;
+    height: 3px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 50%;
+    background: #151515;
+    z-index: 2;
+}
+
+.bicycle-container .handlebars {
+    position: absolute;
+    top: 8px;
+    right: calc(33px / 2 + 8px);
+    width: 10px;
+    height: 10px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top: 2px solid #151515;
+    border-right: 2px solid #151515;
+    border-bottom: 2px solid var(--accent-color);
+    z-index: 2;
+}
+
+@keyframes rt {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#go-btn {
+    background: var(--nav-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+#go-btn:hover {
+    background: #e67e22;
+}
+
+/* Exercise 2 CSS Art */
+#art-box {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#button-box {
+    margin-bottom: 30px;
+}
+
+.art-btn {
+    background: var(--nav-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.art-btn:hover {
+    background: #e67e22;
+}
+
+#art-display {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--nav-color);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Moon Design by CSS moon tutorials codepen*/
+.moon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    position: relative;
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+}
+
+.moon::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Add craters */
+.moon::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #e6c200;
+    border-radius: 50%;
+    top: 30px;
+    left: 25px;
+    box-shadow: 
+        20px 15px 0 -2px #e6c200,
+        35px 40px 0 -4px #e6c200,
+        15px 55px 0 -3px #e6c200;
+}
+
+/* Star Design: CSS star tutorials by css-shape */
+
+.star {
+    width: 300px;  
+    aspect-ratio: 1;
+    background: #F8CA00;
+    clip-path: polygon(50% 0,
+      calc(50%*(1 + sin(.4turn))) calc(50%*(1 - cos(.4turn))),
+      calc(50%*(1 - sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+      calc(50%*(1 + sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+      calc(50%*(1 - sin(.4turn))) calc(50%*(1 - cos(.4turn))) 
+     ); 
+    /* or more simple
+    clip-path: polygon(50% 0,79% 90%,2% 35%,98% 35%,21% 90%); 
+     */
+  }
+
+
+  
+/* Cloud Design by Rahim Af codepen*/
+.cloud {
+    width: 120px;
+    height: 50px;
+    background: linear-gradient(to bottom, #ffffff, #f0f8ff);
+    border-radius: 50px;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cloud::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #ffffff, #f0f8ff);
+    border-radius: 50%;
+    top: -25px;
+    left: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cloud::after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(to bottom, #ffffff, #f0f8ff);
+    border-radius: 50%;
+    top: -35px;
+    right: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional cloud puffs for more realistic look */
+.cloud-extra {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(to bottom, #ffffff, #f0f8ff);
+    border-radius: 50%;
+    top: -15px;
+    left: 45px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide / Show */
+.hide-small {
+    display: none;
+}
+
+.hide-col {
+    display: none;
+}
+
+/* Navigation */
+#main-nav ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+#main-nav li {
+    padding: 10px;
+    margin: 5px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: var(--nav-color);
+    display: block;
+    cursor: pointer;
+}
+
+#main-nav a:hover {
+    color: var(--text-color);
+}
+
+/* Typography */
+h1,
+h2 {
+    color: var(--nav-color);
+    text-align: center;
+    margin: 10px 0;
+}
+
+p {
+    color: var(--nav-color);
+    text-align: center;
+}
+
+/* Media Query */
+@media only screen and (min-width: 600px) {
+    .columns {
+        display: flex;
+    }
+
+    .wrap {
+        flex-wrap: wrap;
+    }
+
+    .one {
+        flex: 1;
+    }
+
+    #main-nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #main-nav li {
+        flex: none;
+        margin: 0 10px;
+        background: none;
+        position: relative;
+    }
+
+    #main-nav li:not(:last-child)::after {
+        content: "|";
+        color: var(--border-color);
+        position: absolute;
+        right: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: bold;
+    }
+
+    #toggle {
+        display: none;
+    }
+
+    .hide-small {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .hide-col {
+        display: none;
+    }
+}
