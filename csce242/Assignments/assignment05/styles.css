@@ -17,7 +17,6 @@
 /* structure */
 .parent-div{
     background-color: var(--bg-color); 
-    margin-bottom: 15%;
 }
 
 body {
@@ -108,6 +107,7 @@ h2{
 
 
 /* FOOTER */
+
 footer p{
     text-align: center;
 }
