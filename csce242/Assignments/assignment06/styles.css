@@ -9,9 +9,9 @@
 }
 
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, 'Source Code Pro Regular', sans-serif;
     background: var(--secondary-color);
     margin: 0;
+
     padding: 0;
 }
 
@@ -99,296 +99,296 @@ body {
     overflow: hidden;
 }
 
-/* Bike Design Source: Coding Torque bicycle CSS tutorial */
-#bike {
-    width: 120px;
-    height: 80px;
-    position: absolute;
-    top: 35px;
-    left: 10px;
-    transition: left 0.3s ease;
-    transform: scale(0.6);
-    transform-origin: bottom left;
-}
-
-/* Bicycle Container Styles */
-.bicycle-container {
-    position: relative;
-    width: 120px;
-    height: 80px;
-    overflow: visible;
-}
-
-.bicycle-container .wheel {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    box-shadow: 0 3px 5px -4px rgba(0, 0, 0, 0.3);
-}
-
-.bicycle-container .wheel .tire {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: inherit;
-    height: inherit;
-    border-radius: 50%;
-    border: 3px solid #151515;
-    z-index: 2;
-}
-
-.bicycle-container .wheel .rim {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border: 3px solid var(--accent-color);
-    z-index: 1;
-}
-
-.bicycle-container .wheel .spokes {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    border-left: 1px solid transparent;
-    border-right: 1px solid transparent;
-    border-top: 1px solid var(--accent-color);
-    z-index: 1;
-    animation: rt 2s infinite linear;
-    background: rgba(200, 100, 100, 0.1);
-}
-
-.bicycle-container .wheel .spokes:nth-of-type(3) {
-    border-left: 1px solid transparent;
-    border-right: 1px solid transparent;
-    border-bottom: 1px solid var(--accent-color);
-}
-
-.bicycle-container .wheel .hub {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--accent-color);
-}
-
-.bicycle-container .back-wheel {
-    left: 0;
-    top: 25px;
-}
-
-.bicycle-container .front-wheel {
-    right: 0;
-    top: 25px;
-}
-
-.bicycle-container .gear {
-    position: absolute;
-    top: 25px;
-    left: calc(40px + 13px);
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #151515;
-    z-index: 4;
-    animation: rt 3s infinite linear;
-}
-
-.bicycle-container .gear .gear-red {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    border: 1px solid var(--accent-color);
-}
-
-.bicycle-container .gear .pedal-tube {
-    position: absolute;
-    margin: auto;
-    top: -10px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: rotate(-90deg);
-    width: 7px;
-}
-
-.bicycle-container .gear .pedal {
-    position: absolute;
-    margin: auto;
-    top: -17px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 7px;
-    height: 2px;
-    background: var(--accent-color);
-    border-radius: 2px;
-    z-index: 3;
-}
-
-.bicycle-container .tube {
-    position: absolute;
-    height: 2px;
-    border-radius: 2px;
-    background: #151515;
-    z-index: 3;
-}
-
-.bicycle-container .chain-tube {
-    left: calc(40px / 2);
-    top: 35px;
-    width: 40px;
-}
-
-.bicycle-container .seat-tube-back {
-    left: calc(40px / 2);
-    top: 35px;
-    transform-origin: left;
-    transform: rotate(-60deg);
-    width: 40px;
-}
-
-.bicycle-container .seat-tube-front {
-    left: calc(40px / 2);
-    top: 35px;
-    transform-origin: right;
-    transform: rotate(60deg);
-    width: 40px;
-}
-
-.bicycle-container .seat-tube-post {
-    left: calc((40px / 2) - 7px);
-    top: 35px;
-    transform-origin: right;
-    transform: rotate(60deg);
-    background: var(--accent-color);
-    z-index: 1;
-    height: 1px;
-    width: 47px;
-}
-
-.bicycle-container .top-tube {
-    left: 40px;
-    top: 15px;
-    width: 38px;
-}
-
-.bicycle-container .top-handlebar-tube {
-    right: 37px;
-    top: 8px;
-    width: 7px;
-    background: var(--accent-color);
-}
-
-.bicycle-container .top-handlebar-tube2 {
-    right: 30px;
-    top: 8px;
-    width: 8px;
-    background: #151515;
-    border-radius: 0%;
-}
-
-.bicycle-container .down-tube {
-    left: calc(40px + 20px);
-    top: 35px;
-    width: 33px;
-    transform-origin: left;
-    transform: rotate(-50deg);
-}
-
-.bicycle-container .head-tube {
-    right: calc(40px / 2);
-    top: 35px;
-    transform-origin: right;
-    transform: rotate(60deg);
-    width: 40px;
-}
-
-.bicycle-container .head-tube-post {
-    right: calc(40px / 2);
-    top: 35px;
-    transform-origin: right;
-    transform: rotate(60deg);
-    width: 47px;
-    background: var(--accent-color);
-    z-index: 1;
-    height: 1px;
-}
-
-.bicycle-container .saddle {
-    position: absolute;
-    top: 7px;
-    left: 28px;
-    width: 17px;
-    height: 3px;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 100%;
-    border-bottom-left-radius: 50%;
-    background: #151515;
-    z-index: 2;
-}
-
-.bicycle-container .handlebars {
-    position: absolute;
-    top: 8px;
-    right: calc(33px / 2 + 8px);
-    width: 10px;
-    height: 10px;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-top: 2px solid #151515;
-    border-right: 2px solid #151515;
-    border-bottom: 2px solid var(--accent-color);
-    z-index: 2;
-}
-
-@keyframes rt {
-    100% {
-        transform: rotate(360deg);
+    /* Bike Design Source: Coding Torque bicycle CSS tutorial */
+    #bike {
+        width: 120px;
+        height: 80px;
+        position: absolute;
+        top: 35px;
+        left: 10px;
+        transition: left 0.3s ease;
+        transform: scale(0.6);
+        transform-origin: bottom left;
     }
-}
 
-#go-btn {
-    background: var(--nav-color);
-    color: var(--primary-color);
-    border: none;
-    padding: 12px 24px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-    font-weight: bold;
-    margin: 10px;
-    transition: background-color 0.3s;
-}
+    /* Bicycle Container Styles */
+    .bicycle-container {
+        position: relative;
+        width: 120px;
+        height: 80px;
+        overflow: visible;
+    }
 
-#go-btn:hover {
-    background: #e67e22;
-}
+    .bicycle-container .wheel {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        box-shadow: 0 3px 5px -4px rgba(0, 0, 0, 0.3);
+    }
+
+    .bicycle-container .wheel .tire {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: inherit;
+        height: inherit;
+        border-radius: 50%;
+        border: 3px solid #151515;
+        z-index: 2;
+    }
+
+    .bicycle-container .wheel .rim {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 3px solid var(--accent-color);
+        z-index: 1;
+    }
+
+    .bicycle-container .wheel .spokes {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        border-top: 1px solid var(--accent-color);
+        z-index: 1;
+        animation: rt 2s infinite linear;
+        background: rgba(200, 100, 100, 0.1);
+    }
+
+    .bicycle-container .wheel .spokes:nth-of-type(3) {
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid var(--accent-color);
+    }
+
+    .bicycle-container .wheel .hub {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--accent-color);
+    }
+
+    .bicycle-container .back-wheel {
+        left: 0;
+        top: 25px;
+    }
+
+    .bicycle-container .front-wheel {
+        right: 0;
+        top: 25px;
+    }
+
+    .bicycle-container .gear {
+        position: absolute;
+        top: 25px;
+        left: calc(40px + 13px);
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #151515;
+        z-index: 4;
+        animation: rt 3s infinite linear;
+    }
+
+    .bicycle-container .gear .gear-red {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: 1px solid var(--accent-color);
+    }
+
+    .bicycle-container .gear .pedal-tube {
+        position: absolute;
+        margin: auto;
+        top: -10px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: rotate(-90deg);
+        width: 7px;
+    }
+
+    .bicycle-container .gear .pedal {
+        position: absolute;
+        margin: auto;
+        top: -17px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 7px;
+        height: 2px;
+        background: var(--accent-color);
+        border-radius: 2px;
+        z-index: 3;
+    }
+
+    .bicycle-container .tube {
+        position: absolute;
+        height: 2px;
+        border-radius: 2px;
+        background: #151515;
+        z-index: 3;
+    }
+
+    .bicycle-container .chain-tube {
+        left: calc(40px / 2);
+        top: 35px;
+        width: 40px;
+    }
+
+    .bicycle-container .seat-tube-back {
+        left: calc(40px / 2);
+        top: 35px;
+        transform-origin: left;
+        transform: rotate(-60deg);
+        width: 40px;
+    }
+
+    .bicycle-container .seat-tube-front {
+        left: calc(40px / 2);
+        top: 35px;
+        transform-origin: right;
+        transform: rotate(60deg);
+        width: 40px;
+    }
+
+    .bicycle-container .seat-tube-post {
+        left: calc((40px / 2) - 7px);
+        top: 35px;
+        transform-origin: right;
+        transform: rotate(60deg);
+        background: var(--accent-color);
+        z-index: 1;
+        height: 1px;
+        width: 47px;
+    }
+
+    .bicycle-container .top-tube {
+        left: 40px;
+        top: 15px;
+        width: 38px;
+    }
+
+    .bicycle-container .top-handlebar-tube {
+        right: 37px;
+        top: 8px;
+        width: 7px;
+        background: var(--accent-color);
+    }
+
+    .bicycle-container .top-handlebar-tube2 {
+        right: 30px;
+        top: 8px;
+        width: 8px;
+        background: #151515;
+        border-radius: 0%;
+    }
+
+    .bicycle-container .down-tube {
+        left: calc(40px + 20px);
+        top: 35px;
+        width: 33px;
+        transform-origin: left;
+        transform: rotate(-50deg);
+    }
+
+    .bicycle-container .head-tube {
+        right: calc(40px / 2);
+        top: 35px;
+        transform-origin: right;
+        transform: rotate(60deg);
+        width: 40px;
+    }
+
+    .bicycle-container .head-tube-post {
+        right: calc(40px / 2);
+        top: 35px;
+        transform-origin: right;
+        transform: rotate(60deg);
+        width: 47px;
+        background: var(--accent-color);
+        z-index: 1;
+        height: 1px;
+    }
+
+    .bicycle-container .saddle {
+        position: absolute;
+        top: 7px;
+        left: 28px;
+        width: 17px;
+        height: 3px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 100%;
+        border-bottom-left-radius: 50%;
+        background: #151515;
+        z-index: 2;
+    }
+
+    .bicycle-container .handlebars {
+        position: absolute;
+        top: 8px;
+        right: calc(33px / 2 + 8px);
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-top: 2px solid #151515;
+        border-right: 2px solid #151515;
+        border-bottom: 2px solid var(--accent-color);
+        z-index: 2;
+    }
+
+    @keyframes rt {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    #go-btn {
+        background: var(--nav-color);
+        color: var(--primary-color);
+        border: none;
+        padding: 12px 24px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1em;
+        font-weight: bold;
+        margin: 10px;
+        transition: background-color 0.3s;
+    }
+
+    #go-btn:hover {
+        background: #e67e22;
+    }
 
 /* Exercise 2 CSS Art */
 #art-box {
@@ -431,7 +431,7 @@ body {
 }
 
 
-/* Moon Design by CSS moon tutorials codepen*/
+/* Moon Design by CSS moon tutorials codepen "I liked how it has little stars" */
 .moon {
     width: 120px;
     height: 120px;
@@ -522,7 +522,6 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Additional cloud puffs for more realistic look */
 .cloud-extra {
     position: absolute;
     width: 35px;
@@ -534,7 +533,7 @@ body {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Hide / Show */
+/* Hide */
 .hide-small {
     display: none;
 }
@@ -574,6 +573,7 @@ h1,
 h2 {
     color: var(--nav-color);
     text-align: center;
+
     margin: 10px 0;
 }
 
@@ -583,7 +583,11 @@ p {
 }
 
 /* Media Query */
-@media only screen and (min-width: 600px) {
+@media screen and (min-width: 600px) {
+    
+}
+
+@media screen and (min-width: 768px) {
     .columns {
         display: flex;
     }

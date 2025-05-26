@@ -39,13 +39,11 @@ const track = document.getElementById('track');
 
 let isAnimating = false;
 
+
 slider.addEventListener('input', function() {
     const sliderValue = parseInt(this.value);
-    const trackWidth = track.offsetWidth - 70; // Account for bike width
-    const position = (sliderValue - 1) / 9 * trackWidth + 10; // Scale from 1-10 to track width
-    
-    bike.style.left = position + 'px';
     speedDisplay.textContent = `Position: ${sliderValue}`;
+    
 });
 
 goBtn.addEventListener('click', function() {
@@ -53,19 +51,17 @@ goBtn.addEventListener('click', function() {
     
     isAnimating = true;
     const speed = parseInt(slider.value);
-    const trackWidth = track.offsetWidth - 70; // Account for bike width
-    const duration = (11 - speed) * 0.5; // Faster speed = shorter duration
+    const trackWidth = track.offsetWidth - 70; 
+    const duration = (11 - speed) * 0.5; 
     
-    // Reset bike position
+
     bike.style.left = '10px';
     bike.style.transition = `left ${duration}s linear`;
     
-    // Animate bike
     setTimeout(() => {
         bike.style.left = trackWidth + 'px';
     }, 50);
     
-    // Reset after animation and update slider
     setTimeout(() => {
         bike.style.transition = 'left 0.3s ease';
         bike.style.left = '10px';
@@ -77,5 +73,4 @@ goBtn.addEventListener('click', function() {
     }, duration * 1000 + 100);
 });
 
-// Show Exercise 1 by default
 ex1Section.classList.remove('hide-col');

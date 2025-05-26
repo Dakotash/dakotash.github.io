@@ -17,6 +17,25 @@ body{
     font-family: sans-serif;
 }
 
+h1{
+    font-size: 28px;
+    color: var(--alt-gold-color);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+h2{
+    font-size: 24px;
+    color: var(--alt-gold-color);
+    text-align: center;
+}
+
+h3{
+    font-size: 22px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
 ul{
     list-style: none;
 }
@@ -26,9 +45,24 @@ a{
     color: var(--primary-color);
 }
 
+label, input{
+    display: block;
+}
+
 .container{
     max-width: 90%;
     margin: 0 auto;
+}
+
+.primary-btn{
+    display:inline-block;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid var(--alt-gold-color);
+    color:var(--secondary-color);
+    padding: 14px 10px;
+    background-color: var(--primary-color);
+    text-transform: capitalize;
 }
 
 header{
@@ -40,6 +74,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .header .logo img{
@@ -49,26 +84,236 @@ header{
 
 nav ul{
     display: flex;
-    gap: 50px;
+    flex-direction: column;
+    gap: 20px;
 }
 
-nav ul li.active{
-    border-bottom: 1px solid var(--alt-gold-color);
+nav ul li{
     padding-bottom: 10px;
 }
 
+nav ul li:hover{
+    border-bottom: 1px solid var(--alt-gold-color);
+}
+
 nav ul a{
-    font-size: 22px;
+    font-size: 16px;
     font-weight: bold;
 }
 
 
-.header-icons svg{
+/* Banner */
 
-    stroke: var(--primary-color);
-    width: 35px;
+#banner{
+    background-image: url(https://place-hold.it/1000x350);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
+.banner-content{
+    max-width: 550px;
+    text-align: center;
+}
+
+#banner h1{
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+
+/* services */
+
+#services{
+    padding: 30px 0;
+}
+
+#services h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.services-gallery, .amenities-gallery-grid{
+   display: flex;
+   flex-wrap: wrap;
+    gap:80px;
+    justify-content: center;
+}
+
+.gallery-item{
+    background-color: var(--secondary-color);
+    border: 1px solid var(--alt-gold-color);
+}
+
+.gallery-item h3{
+    text-align: center;
+    padding: 8px 0;
+}
+
+
+/* amenities gallery */
+#amenities-gallery{
+    padding: 30px 0;
+}
+
+
+#amenities-gallery .gallery-item{
+    background-color: transparent;
+    border: none;
+}
+
+/* available amenities */
+#amenities{
+    padding: 30px 0;
+}
+
+#amenities h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#amenities ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+#amenities ul li{
+    display:flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+}
+
+#amenities ul li svg{
+    width: 25px;
+}
+
+
+/* Memberships */
+
+#memberships{
+    padding:30px 0;
+}
+
+
+.membership-types{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+    gap: 20px;
+}
+
+.membership-item{
+    background-color: var(--secondary-color);
+    border: 5px solid var(--alt-gold-color);
+    padding:10px;
+    color: var(--alt-gold-color);
+    width: 300px;
+}
+
+.membership-item h3{
+    border-bottom: 1px solid var(--primary-color);
+    color: var(--alt-gold-color);
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.membership-info{
+    text-align: center;
+}
+
+.membership-info strong{
+    display: block;
+    text-align: center;
+    margin-bottom:20px;
+    font-size: 42px;
+}
+
+
+.membership-info p{
+margin-bottom: 20px;
+text-align: center;
+}
+
+
+/* Trainers */
+
+#trainers{
+    padding:30px 0;
+}
+
+.trainer-info{
+    display: flex;
+    align-items: center;
+    gap:30px;
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 20px 0;
+    max-width: fit-content;
+}
+
+.trainer-info img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.trainer-info-header-even h2{
+    text-align: end;
+}
+
+.trainer-info-header h2{
+    color: var(--alt-gold-color);
+    margin-bottom: 20px;
+}
+
+
+/* Contact */
+
+#contact{
+    padding: 30px 0;
+}
+
+.contact-content{
+ display: grid; 
+ grid-template-columns: 1fr;
+ gap: 20px;
+}
+
+form{
+    border: 1px solid var(--secondary-color);
+    padding: 15px;
+    justify-content: center;
+    box-shadow: 0px 4px 8px var(--secondary-color);
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+.form-group label{
+    margin-bottom: 10px;
+}
+
+.form-group input, .form-group select, .form-group textarea{
+    padding: 10px;
+    width:100%;
+}
+
+.form-group textarea {
+    min-height: 150px;
+}
+
+.contact-img {
+    display: none;
+    justify-content: center;
+}
 
 /* FOOTER */
 footer{
@@ -79,4 +324,69 @@ footer{
 
 footer p{
     text-align: center;
+}
+
+
+/* Media Queries */
+/* Portrait Tablet */
+@media screen and (min-width: 600px) {
+    
+}
+
+/* Landscape Tablet */
+@media screen and (min-width: 768px) {
+
+    h1{
+        font-size: 50px;
+        color: var(--alt-gold-color);
+        margin-bottom: 40px;
+        text-align: left;
+    }
+    
+    h2{
+        font-size: 26px;
+        color: var(--alt-gold-color);
+        text-align: left;
+    }
+    
+    h3{
+        font-size: 23px;
+        color: var(--primary-color);
+        text-align: left;
+    }
+
+    nav ul{
+        flex-direction: row;
+        gap:50px;
+    }
+    
+    nav ul a{
+        font-size: 22px;
+        font-weight: bold;
+    }
+    
+    #amenities h2{
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    #amenities ul{
+        gap: 80px;
+    }
+
+    .membership-types{
+          gap: 80px;
+      }
+
+      .contact-content{
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+       }
+
+       .contact-img {
+        display: flex;
+        justify-content: center;
+    }
+    
 }

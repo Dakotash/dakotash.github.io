@@ -1,9 +1,9 @@
-// Exercise 2: CSS Art functionality
+// Exercise 2functionality
 const artButtons = document.querySelectorAll('.art-btn');
 const artDisplay = document.getElementById('art-display');
 
 function createArt(shape) {
-    artDisplay.innerHTML = ''; // Clear previous art
+    artDisplay.innerHTML = ''; 
     
     if (shape === 'moon') {
         const moon = document.createElement('div');
@@ -20,7 +20,7 @@ function createArt(shape) {
     }
 }
 
-// Single function for all art buttons using if statements
+
 artButtons.forEach(button => {
     button.addEventListener('click', function() {
         const shape = this.getAttribute('data-shape');
