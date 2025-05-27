@@ -6,7 +6,6 @@ const ex2Link = document.getElementById('ex2-link');
 const ex1Section = document.getElementById('ex1');
 const ex2Section = document.getElementById('ex2');
 
-// Toggle menu functionality
 toggle.addEventListener('click', function() {
     if (navUl.classList.contains('hide-small')) {
         navUl.classList.remove('hide-small');
@@ -17,7 +16,7 @@ toggle.addEventListener('click', function() {
     }
 });
 
-// Exercise navigation
+
 ex1Link.addEventListener('click', function(e) {
     e.preventDefault();
     ex1Section.classList.remove('hide-col');
