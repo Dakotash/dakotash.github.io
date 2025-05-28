@@ -49,11 +49,11 @@ img {
     border-bottom:1px solid var(--front-color);
 }
 
-#toggle-nav div{
-    width: 25px;
-    height: 2px;
+#toggle-nav div {
+    width:25px;
+    height:2px;
     background:var(--secondary-color);
-    margin: 6px 0;
+    margin:6px 0;
 }
 
 .image-bold {
@@ -62,12 +62,37 @@ img {
 
 #circle {
     width:50px;
-    height:5px;
+    height:50px;
     border-radius: 25px;
+    background:var(--front-color);
 }
 
-.bounce{
+.bounce {
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: relative;
+}
 
+.highlight {
+    background:purple;
+    color:white;
+}
+
+@keyframes bounce {
+    0% {
+        top:0px;
+        background:navy;
+    }
+    50% {
+        top:-200px;
+        background:green;
+    }
+    100% {
+        top:0px;
+        background:red;
+    }
 }
 
 /* Typography */

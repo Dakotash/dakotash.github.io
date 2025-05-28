@@ -1,0 +1,116 @@
+:root {
+    --bg-color: #FFFFFF;
+    --text-primary: #333;
+    --text-secondary: #e7650f;
+    --button-bg: #4CAF50;
+    --button-hover: #45a049;
+    --button-text: white;
+    --house-bg: #dedede;
+    --house-border: #aaa;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--bg-color);
+  }
+  
+  .container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  h1 {
+    color: var(--text-primary);
+  }
+  
+  h2 {
+    color: var(--text-secondary);
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+  }
+  
+  button:hover {
+    background-color: var(--button-hover);
+  }
+  
+  #output {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    margin-top: 80px;
+  }
+  
+  /* House Art from chat gpt prompt used in class */
+    .house {
+        position: relative;
+        width: 120px;
+        height: 100px;
+        background: #8B4513;
+        border: 3px solid #5c3317;
+        border-radius: 4px;
+    }
+    
+    /* Roof */
+    .house::before {
+        content: "";
+        position: absolute;
+        top: -60px;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-bottom: 60px solid #A52A2A;
+    }
+    
+    /* Door */
+    .house::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 45px;
+        width: 30px;
+        height: 40px;
+        background: #3E2723;
+        border: 2px solid #1b1b1b;
+        border-radius: 2px;
+    }
+  
+  #stick-person {
+    margin-top: 50px;
+    display: none;
+  }
+  
+  #stick-person img {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  #exercise-button {
+    display: none;
+    margin-top: 30px;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  .hide{
+    visibility: hidden;
+  }
+
+#main-footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+}
