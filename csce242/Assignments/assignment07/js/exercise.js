@@ -1,23 +1,26 @@
-let exerciseInterval;
-let currentStretch = 1;
+let current = 1;
+let intervalId = null;
+const stickPersonImg= document.querySelector("#stick-person img");
 
 document.getElementById("exerciseBtn").addEventListener("click", function () {
-    currentStretch = 1;
-    const stickPersonImg = document.querySelector("#stick-person img");
-    stickPersonImg.src = "images/" + currentStretch + ".png";
-    
-    if (exerciseInterval) {
-        clearInterval(exerciseInterval);
+    if (intervalId != null){
+        return;
     }
-    
 
-    exerciseInterval = setInterval(function() {
-        currentStretch++; 
-        if (currentStretch <= 6) {
-            stickPersonImg.src = "images/" + currentStretch + ".png";
-        } else {
-            clearInterval(exerciseInterval);
-            exerciseInterval = null;
+    /*for(let i = 1; i < 7; i++){
+        setTimeout(() => {
+          stickPersonImg.src = "images/" + i + ".png"
+        },1000) 
+    }*/
+
+    intervalId= setInterval(()=>{
+        current++;
+        if (current > 6) {
+            clearInterval(intervalId);
+            intervalId = null;
+            return;
         }
-    }, 1000); 
+         stickPersonImg.src = "images/" + current + ".png"
+    },500)
+
 });
