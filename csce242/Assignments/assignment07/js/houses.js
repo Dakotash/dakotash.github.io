@@ -8,7 +8,7 @@ document.getElementById("drawButton").addEventListener("click", function () {
       output.appendChild(house);
     }
     
-// This code is to show the stick person and exercise button
+// the exwercise button code 
     document.getElementById("stick-person").style.display = "block";
     document.getElementById("exercise-button").style.display = "block";
     
