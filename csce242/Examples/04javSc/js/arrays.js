@@ -36,5 +36,15 @@ document.getElementById("btn-show-toy-table").onclick = () => {
         let td2 = document.createElement("td");
         td2.innerHTML = price;
         tr.append(td2);
+
+        tr.onclick = () => {
+            document.getElementById("modal").classList.remove("hidden");
+            document.querySelector("#modal h1").innerHTML = toy;
+            document.querySelector("#modal p").innerHTML = `$${price}`;
+        }
     }
 };
+
+document.getElementById("close").onclick = () => {
+    document.getElementById("modal").classList.add("hidden");
+}
