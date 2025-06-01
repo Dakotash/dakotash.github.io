@@ -1,13 +1,32 @@
 /* STRUCTURE */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     background-color: black;
     margin: 20px; 
+    min-height: calc(100vh - 40px); /
+    display: flex;
+    flex-direction: column;
+}
+
+.matrix-main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+    flex: 1; /* This makes main expand to fill available space */
 }
 
 footer {
     text-align: center;
-    padding:5px;
-    margin:10px 0px;
+    padding: 5px;
+    margin: 10px 0px;
+    margin-top: auto; /
 }
 
 /* ASSIGNMENTS GRID */
@@ -144,7 +163,7 @@ a:hover {
 /* Labtop / Desktop */
 @media screen and (min-width: 992px) {
     header, footer, .main-area {
-        width:70%;
+        width: 100%;
     }
 }
 
