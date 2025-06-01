@@ -587,7 +587,7 @@ footer p{
 
 /* Medium screens - Tablet */
 @media screen and (min-width: 600px) {
-    .container {
+   /* .container {
         max-width: 95%;
     }
     
@@ -615,7 +615,7 @@ footer p{
     #amenities ul {
         grid-template-columns: 1fr 1fr;
         gap: 25px;
-    }
+    } */
 }
 
 /* Medium-Large screens - Wide Tablet */
