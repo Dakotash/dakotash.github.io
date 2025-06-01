@@ -103,7 +103,6 @@ a:hover {
 @media screen and (min-width: 768px) {
     header, footer, .main-area {
         width:85%;
-        margin:10px auto;
     }
 
     /* Columns */
