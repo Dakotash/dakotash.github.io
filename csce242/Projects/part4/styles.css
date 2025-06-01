@@ -191,16 +191,7 @@ nav ul a{
     animation: fadeInUp 1s ease-out;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 
 #banner h1{
     text-transform: uppercase;
@@ -241,13 +232,11 @@ nav ul a{
     height: 350px;
     display: flex;
     flex-direction: column;
-}
-
-.gallery-item:hover {
-    transform: translateY(-8px);
     box-shadow: var(--shadow-hover);
     border-color: var(--alt-gold-color);
 }
+
+
 
 .gallery-item h3{
     text-align: center;
@@ -266,9 +255,7 @@ nav ul a{
     transition: transform 0.3s ease;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
+
 
 /* Amenities gallery */
 #amenities-gallery{
@@ -282,6 +269,7 @@ nav ul a{
     border-radius: 12px;
     overflow: hidden;
     height: 400px;
+    
 }
 
 #amenities-gallery .gallery-item img {
@@ -323,12 +311,7 @@ nav ul a{
     border-left: 4px solid var(--primary-color);
 }
 
-#amenities ul li:hover {
-    background-color: var(--white);
-    transform: translateX(5px);
-    box-shadow: var(--shadow);
-    border-left-color: var(--alt-gold-color);
-}
+
 
 #amenities ul li svg{
     width: 25px;
@@ -428,13 +411,6 @@ nav ul a{
     transition: all 0.3s ease;
 }
 
-.trainer-info:hover {
-    background-color: var(--light-gray);
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 12px;
-    border-bottom-color: var(--primary-color);
-}
 
 .trainer-info img{
     width: 120px;
@@ -445,10 +421,6 @@ nav ul a{
     object-fit: cover;
 }
 
-.trainer-info:hover img {
-    border-color: var(--alt-gold-color);
-    transform: scale(1.05);
-}
 
 .trainer-info-header-even h2{
     text-align: right;
@@ -465,30 +437,63 @@ nav ul a{
     color: #555;
 }
 
-/* Contact */
+/* Contact Section */
 #contact{
     padding: 60px 0;
     background-color: var(--light-gray);
 }
 
-.contact-content{
- display: grid; 
- grid-template-columns: 1fr;
- gap: 40px;
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-form{
+.section-subtitle {
+    font-size: 18px;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.contact-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+#contact-form {
     background-color: var(--white);
-    border: 2px solid var(--border-gray);
     border-radius: 16px;
     padding: 40px;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-form:hover {
-    box-shadow: var(--shadow-hover);
-    border-color: var(--primary-color);
+#contact-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--alt-gold-color));
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.required {
+    color: var(--error-color);
 }
 
 .form-group{
@@ -526,15 +531,64 @@ form:hover {
     resize: vertical;
 }
 
-.contact-img {
-    display: none;
-    justify-content: center;
+.form-actions {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 15px;
 }
 
-.contact-img img {
-    border-radius: 12px;
+.form-note {
+    font-size: 14px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.contact-info {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 30px;
     box-shadow: var(--shadow);
+    align-self: flex-start;
+}
+
+.contact-info h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--secondary-color);
+    font-size: 22px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.contact-info h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--alt-gold-color));
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.info-item svg {
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.info-item span {
+    color: var(--text-medium);
 }
 
 /* FOOTER */
