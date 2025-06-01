@@ -1,0 +1,116 @@
+<!--Dakota Hawkins CSCE 242-->
+<!--
+References:
+(w3schols) How TO - Responsive Form
+(youTube) Build a Contact Form Page with HTML & CSS
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Hawkins Gym for membership inquiries, personal training, or general questions. We're here to help with your fitness journey.">
+    <title>Contact Us | Hawkins Gym</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <a class="logo" href="index.html"><img src="../images/gym-logo.png" alt="Hawkins Gym logo"></a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="amenities.html">Amenities</a></li>
+                        <li><a href="memberships.html">Memberships</a></li>
+                        <li><a href="trainers.html">Trainers</a></li>
+                        <li><a href="contact.html" class="active">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Contact Hawkins Gym</h1>
+                    <p class="section-subtitle">Have questions or ready to start your fitness journey? Reach out to our team.</p>
+                </div>
+
+                <div class="contact-content">
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name </label>
+                                <input type="text" placeholder="Enter your full name" id="name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address </span></label>
+                                <input type="email" placeholder="Enter your email address" id="email" >
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" placeholder="Enter your phone number" id="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject </span></label>
+                                <select id="subject">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option>Membership Information</option>
+                                    <option>Personal Training</option>
+                                    <option>Group Classes</option>
+                                    <option>Facility Tour</option>
+                                    <option>General Inquiry</option>
+                                    <option>Feedback</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message </span></label>
+                            <textarea id="message" placeholder="Tell us about your fitness goals or ask us any questions..."></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                           <button class="primary-btn" type="submit">Send Message</button>
+                           <p class="form-note">We'll respond within 24 business hours</p>
+                        </div>
+                    </form>
+                    
+                    <div class="contact-info">
+                        <h3>Other Ways to Reach Us</h3>
+                        <div class="info-item">
+
+                            <span>(803) 555-7890</span>
+                        </div>
+                        <div class="info-item">
+                            <span>info@hawkinsgym.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span>123 Fitness Ave, Lexington, SC 29072</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hawkins Gym - Lexington South Carolina</p>
+            <p class="footer-links">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
