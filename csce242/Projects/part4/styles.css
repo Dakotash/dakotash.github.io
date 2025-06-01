@@ -1,6 +1,7 @@
 /* References:
 (YouTube) Master CSS Transform Property: Rotate, Scale, Translate & Skew Tutorial 
 (youTube) CSS website layout in 9 minutes! 
+(youTube) Professional Pricing Plans Section Design using HTML and CSS
 (w3schools) CSS Buttons
 (mdn web docs) transitions
 (youTube) 10 CSS PRO Tips and Tricks you NEED to know
@@ -11,6 +12,9 @@
 (youTube) UI/UX Website // HTML and CSS development
 (w3schols) How TO - Responsive Form
 (youTube) Build a Contact Form Page with HTML & CSS
+(w3Schools) https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+(youTube) JavaScript - How to Create a Responsive Hamburger Menu with HTML, CSS, & JavaScript
+
 */
 
 :root{
@@ -170,6 +174,43 @@ nav ul a{
     letter-spacing: 0.5px;
 }
 
+/* https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: all 0.3s ease;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+
+.nav-toggle.active .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.nav-toggle.active .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
 /* Banner */
 #banner{
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://static.vecteezy.com/system/resources/thumbnails/026/781/389/small_2x/gym-interior-background-of-dumbbells-on-rack-in-fitness-and-workout-room-photo.jpg);
@@ -262,6 +303,7 @@ nav ul a{
 #amenities-gallery{
     padding: 60px 0;
     background-color: var(--light-gray);
+    cursor: pointer;
 }
 
 #amenities-gallery .gallery-item{
@@ -481,7 +523,7 @@ nav ul a{
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--alt-gold-color));
+   
 }
 
 .form-row {
@@ -571,7 +613,6 @@ nav ul a{
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary-color), var(--alt-gold-color));
 }
 
 .info-item {
@@ -668,6 +709,42 @@ nav ul a{
     transform: translateY(0);
 }
 
+/* Easter Egg Section */
+#easter-egg {
+    padding: 100px 0;
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.easter-egg-content {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.easter-egg-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.easter-egg-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--text-medium);
+}
+
+.easter-egg-content a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.easter-egg-actions {
+    margin-top: 30px;
+}
+
 /* FOOTER */
 footer{
     padding: 40px 0;
@@ -732,6 +809,84 @@ footer p{
     .image-overlay-title {
         font-size: 16px;
         padding: 15px 10px 10px;
+    }
+}
+
+/* Mobile Navigation Styles */
+@media screen and (max-width: 767px) {
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .header {
+        position: relative;
+    }
+    
+    nav ul {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--secondary-color);
+        border: 2px solid var(--alt-gold-color);
+        border-radius: 8px;
+        box-shadow: var(--shadow-hover);
+        padding: 20px;
+        margin: 10px;
+        min-width: 200px;
+        transform: translateY(-10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav ul.nav-open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    nav ul li {
+        margin: 15px 0;
+        text-align: center;
+        border-bottom: 1px solid var(--border-gray);
+        padding-bottom: 10px;
+    }
+    
+    nav ul li:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    
+    nav ul li:hover {
+        border-bottom: 1px solid var(--alt-gold-color);
+        transform: none;
+    }
+    
+    nav ul li:last-child:hover {
+        border-bottom: none;
+    }
+    
+    nav ul a {
+        color: var(--alt-gold-color);
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: block;
+        padding: 5px 0;
+        transition: color 0.3s ease;
+    }
+    
+    nav ul a:hover {
+        color: var(--white);
+    }
+    
+    nav ul a.active {
+        color: var(--white);
+        font-weight: 700;
     }
 }
 
@@ -816,18 +971,38 @@ footer p{
         text-align: center;
     }
 
-    #services h2, #amenities h2, #memberships h1, #trainers h1, #contact h1, #amenities-gallery h1 {
+    #services h2, #amenities h2, #memberships h1, #trainers h1, #contact h1, #amenities-gallery h1, #easter-egg h1 {
         text-align: center;
+    }
+
+    .nav-toggle {
+        display: none;
     }
 
     nav ul{
         flex-direction: row;
         gap: 50px;
+        position: static;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        min-width: auto;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        transition: none;
     }
     
     nav ul a{
         font-size: 18px;
         font-weight: 600;
+        color: var(--primary-color);
+    }
+
+    nav ul a:hover {
+        color: var(--alt-gold-color);
     }
     
     .services-gallery, .amenities-gallery-grid {
