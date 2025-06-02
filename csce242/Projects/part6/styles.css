@@ -1,0 +1,1090 @@
+/* 
+References:
+(YouTube) Master CSS Transform Property: Rotate, Scale, Translate & Skew Tutorial 
+(youTube) CSS website layout in 9 minutes! 
+(youTube) Professional Pricing Plans Section Design using HTML and CSS
+(w3schools) CSS Buttons
+(mdn web docs) transitions
+(youTube) 10 CSS PRO Tips and Tricks you NEED to know
+(youTube) Learn CSS Animations in 9 Minutes
+(youTube) Create a RESPONSIVE NAVBAR with sidebar animation (CSS ONLY)
+(CSS-TRICKS)  Pseudo-elements
+(MDN Web Docs) transform-*
+(youTube) UI/UX Website // HTML and CSS development
+(w3schols) How TO - Responsive Form
+(youTube) Build a Contact Form Page with HTML & CSS
+(w3Schools) https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+(youTube) JavaScript - How to Create a Responsive Hamburger Menu with HTML, CSS, & JavaScript
+
+*/
+
+:root{
+    --body-color:#f7f7f7;
+    --primary-color:#AD893E;
+    --secondary-color:#090804;
+    --alt-gold-color: #FCCA2C;
+    --white: #fff;
+    --light-gray: #f9f9f9;
+    --border-gray: #e0e0e0;
+    --shadow: 0 4px 12px rgba(0,0,0,0.1);
+    --shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
+    --text-dark: #333;
+    --text-medium: #555;
+    --text-light: #666;
+    --footer-gradient-end: #333;
+    --focus-shadow: rgba(173, 137, 62, 0.1);
+    --banner-overlay: rgba(0,0,0,0.4);
+    --text-shadow: rgba(0,0,0,0.7);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--body-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1{
+    font-size: 28px;
+    color: var(--alt-gold-color);
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 24px;
+    color: var(--alt-gold-color);
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size: 20px;
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.7;
+    color: #555;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--alt-gold-color);
+}
+
+label, input{
+    display: block;
+}
+
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.primary-btn{
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 2px solid var(--alt-gold-color);
+    color: var(--white);
+    padding: 14px 28px;
+    background: linear-gradient(135deg, var(--primary-color), var(--alt-gold-color));
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+    background: linear-gradient(135deg, var(--alt-gold-color), var(--primary-color));
+}
+
+header{
+    padding: 2px 0;
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow);
+    position: relative;
+    z-index: 100;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header .logo img{
+    width: 130px;
+    height: 130px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.header .logo img:hover {
+    transform: scale(1.05);
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+nav ul li{
+    padding-bottom: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+nav ul li:hover{
+    border-bottom: 2px solid var(--alt-gold-color);
+    transform: translateY(-1px);
+}
+
+nav ul a{
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: all 0.3s ease;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+
+.nav-toggle.active .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.nav-toggle.active .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Banner */
+#banner{
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://static.vecteezy.com/system/resources/thumbnails/026/781/389/small_2x/gym-interior-background-of-dumbbells-on-rack-in-fitness-and-workout-room-photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.banner-content{
+    max-width: 700px;
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+
+
+#banner h1{
+    text-transform: uppercase;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    font-size: 32px;
+}
+
+/* Services */
+#services{
+    padding: 60px 0;
+    background-color: var(--white);
+}
+
+#services h2{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 28px;
+}
+
+.services-gallery, .amenities-gallery-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-item{
+    background-color: var(--white);
+    border: 2px solid var(--border-gray);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    width: 95%;
+    max-width: none;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-hover);
+    border-color: var(--alt-gold-color);
+    position: relative;
+}
+
+
+
+.gallery-item h3{
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: var(--alt-gold-color);
+    margin: 0;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+
+/* Amenities gallery */
+#amenities-gallery{
+    padding: 60px 0;
+    background-color: var(--light-gray);
+    cursor: pointer;
+}
+
+#amenities-gallery .gallery-item{
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    overflow: hidden;
+    height: 400px;
+    
+}
+
+#amenities-gallery .gallery-item img {
+    height: 100%;
+}
+
+#amenities-gallery .gallery-item:hover {
+    border-color: var(--alt-gold-color);
+    transform: translateY(-5px);
+}
+
+/* Available amenities */
+#amenities{
+    padding: 60px 0;
+    background-color: var(--white);
+}
+
+#amenities h2{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#amenities ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#amenities ul li{
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-color);
+}
+
+
+
+#amenities ul li svg{
+    width: 25px;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+#amenities ul li strong {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* Memberships */
+#memberships{
+    padding: 60px 0;
+    background-color: var(--light-gray);
+}
+
+.membership-types{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.membership-item{
+    background-color: var(--white);
+    border: 3px solid var(--primary-color);
+    border-radius: 16px;
+    padding: 30px 20px;
+    color: var(--secondary-color);
+    width: 320px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.membership-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--alt-gold-color));
+}
+
+.membership-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--alt-gold-color);
+}
+
+.membership-item h3{
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--border-gray);
+    font-size: 22px;
+}
+
+.membership-info{
+    text-align: center;
+}
+
+.membership-info strong{
+    display: block;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 48px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.membership-info p{
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Trainers */
+#trainers{
+    padding: 60px 0;
+    background-color: var(--white);
+}
+
+.trainer-info{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    border-bottom: 2px solid var(--border-gray);
+    padding: 60px 0;
+    max-width: 100%;
+    transition: all 0.3s ease;
+}
+
+
+.trainer-info img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+}
+
+.trainer-info img:hover {
+    transform: scale(1.05);
+    border-color: var(--alt-gold-color);
+}
+
+.trainer-info-header-even h2{
+    text-align: right;
+}
+
+.trainer-info-header h2{
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+.trainer-info-header p {
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Contact Section */
+#contact{
+    padding: 60px 0;
+    background-color: var(--light-gray);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.contact-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+#contact-form {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#contact-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+   
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.required {
+    color: var(--error-color);
+}
+
+.form-group{
+    margin-bottom: 25px;
+}
+
+.form-group label{
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input, .form-group select, .form-group textarea{
+    padding: 15px;
+    width: 100%;
+    border: 2px solid var(--border-gray);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: var(--light-gray);
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: var(--white);
+    box-shadow: 0 0 0 3px rgba(173, 137, 62, 0.1);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.form-note {
+    font-size: 14px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.contact-info {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    align-self: flex-start;
+}
+
+.contact-info h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--secondary-color);
+    font-size: 22px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.contact-info h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.info-item svg {
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.info-item span {
+    color: var(--text-medium);
+}
+
+/* Modal Styles for Amenities Gallery */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+#modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-hover);
+}
+
+#close-modal {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: var(--white);
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+#close-modal:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Image Overlay Title Styles */
+.image-overlay-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: var(--white);
+    padding: 20px 15px 15px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .image-overlay-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Easter Egg Section */
+#easter-egg {
+    padding: 100px 0;
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.easter-egg-content {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.easter-egg-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.easter-egg-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--text-medium);
+}
+
+.easter-egg-content a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.easter-egg-actions {
+    margin-top: 30px;
+}
+
+/* FOOTER */
+footer{
+    padding: 40px 0;
+    background: linear-gradient(135deg, var(--secondary-color), #333);
+    color: var(--white);
+}
+
+footer p{
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: var(--white);
+}
+
+/* Media Queries */
+
+/* Small screens - Mobile first (default behavior above) */
+@media screen and (max-width: 599px) {
+    .services-gallery, .amenities-gallery-grid {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .gallery-item {
+        width: 95%;
+        max-width: none;
+        height: 350px;
+    }
+    
+    .gallery-item img {
+        height: 270px;
+    }
+    
+    #amenities-gallery .gallery-item {
+        height: 400px;
+    }
+    
+    #amenities-gallery .gallery-item img {
+        height: 100%;
+    }
+    
+    #amenities ul {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Modal responsive adjustments */
+    #modal-content {
+        max-width: 100%;
+        max-height: 85%;
+    }
+    
+    #close-modal {
+        top: 10px;
+        right: 15px;
+        font-size: 30px;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .image-overlay-title {
+        font-size: 16px;
+        padding: 15px 10px 10px;
+    }
+}
+
+/* Mobile Navigation Styles */
+@media screen and (max-width: 767px) {
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .header {
+        position: relative;
+    }
+    
+    nav ul {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--secondary-color);
+        border: 2px solid var(--alt-gold-color);
+        border-radius: 8px;
+        box-shadow: var(--shadow-hover);
+        padding: 20px;
+        margin: 10px;
+        min-width: 200px;
+        transform: translateY(-10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav ul.nav-open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    nav ul li {
+        margin: 15px 0;
+        text-align: center;
+        border-bottom: 1px solid var(--border-gray);
+        padding-bottom: 10px;
+    }
+    
+    nav ul li:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    
+    nav ul li:hover {
+        border-bottom: 1px solid var(--alt-gold-color);
+        transform: none;
+    }
+    
+    nav ul li:last-child:hover {
+        border-bottom: none;
+    }
+    
+    nav ul a {
+        color: var(--alt-gold-color);
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: block;
+        padding: 5px 0;
+        transition: color 0.3s ease;
+    }
+    
+    nav ul a:hover {
+        color: var(--white);
+    }
+    
+    nav ul a.active {
+        color: var(--white);
+        font-weight: 700;
+    }
+
+    /* Mobile trainer styles */
+    .trainer-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .trainer-info img {
+        order: -1;
+    }
+    
+    .trainer-info-header-even h2 {
+        text-align: center;
+    }
+}
+
+/* Medium screens - Tablet */
+@media screen and (min-width: 600px) {
+   /* .container {
+        max-width: 95%;
+    }
+    
+    .services-gallery, .amenities-gallery-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+    
+    .gallery-item {
+        width: calc(50% - 12px);
+        max-width: 300px;
+        min-width: 250px;
+        height: 380px;
+    }
+    
+    .gallery-item img {
+        height: 300px;
+    }
+    
+    #amenities-gallery .gallery-item {
+        height: 420px;
+    }
+    
+    #amenities ul {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    } */
+}
+
+/* Medium-Large screens - Wide Tablet */
+@media screen and (min-width: 700px) {
+    .services-gallery, .amenities-gallery-grid {
+        gap: 30px;
+    }
+    
+    .gallery-item {
+        width: calc(50% - 15px);
+        max-width: none;
+        min-width: unset;
+        height: 400px;
+    }
+    
+    .gallery-item img {
+        height: 320px;
+    }
+    
+    #amenities-gallery .gallery-item {
+        height: 450px;
+    }
+}
+
+/* Large screens - Desktop */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    h1{
+        font-size: 50px;
+        text-align: left;
+    }
+    
+    h2{
+        font-size: 32px;
+        text-align: left;
+    }
+    
+    h3{
+        font-size: 24px;
+        text-align: left;
+    }
+
+    #banner h1 {
+        font-size: 56px;
+        text-align: center;
+    }
+
+    #services h2, #amenities h2, #memberships h1, #trainers h1, #contact h1, #amenities-gallery h1, #easter-egg h1 {
+        text-align: center;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    nav ul{
+        flex-direction: row;
+        gap: 50px;
+        position: static;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        min-width: auto;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        transition: none;
+    }
+    
+    nav ul a{
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+
+    nav ul a:hover {
+        color: var(--alt-gold-color);
+    }
+    
+    .services-gallery, .amenities-gallery-grid {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 30px;
+    }
+    
+    .gallery-item {
+        width: calc(25% - 22px);
+        min-width: 220px;
+        max-width: 280px;
+        height: 320px;
+    }
+    
+    .gallery-item img {
+        height: 240px;
+    }
+    
+    #amenities-gallery .gallery-item {
+        width: calc(33% - 20px); 
+        min-width: 280px; 
+        max-width: 380px; 
+        height: 380px; 
+    }
+    .amenities-gallery-grid {
+        gap: 25px; 
+    }
+    #amenities-gallery .gallery-item img {
+        height: 100%;
+    }
+    
+    #amenities h2{
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    #amenities ul{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+
+    .membership-types{
+        gap: 40px;
+    }
+
+    .contact-content{
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+    }
+
+    .contact-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .trainer-info {
+        gap: 60px;
+        padding: 50px 0;
+    }
+
+}
