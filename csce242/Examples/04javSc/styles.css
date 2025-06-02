@@ -194,6 +194,33 @@ h1, h2 {
     text-align: center;
 }
 
+#shoes section {
+    width:90%;
+    margin:10px auto;
+    padding:5px;
+}
+
+#shoes h3, #shoes ul, #shoes p {
+    color:white;
+}
+
+#breweries {
+    flex-wrap: wrap;
+}
+
+#breweries section {
+    width:40%;
+    margin:10px auto;
+    padding:5px;
+    background-color:burlywood;
+}
+
+#breweries iframe {
+    max-width:90%;
+    display:block;
+    margin:auto;
+}
+
 
 /* Media Queries */
 /* Portrait Tablet */
