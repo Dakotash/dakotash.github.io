@@ -1,5 +1,5 @@
 const getTrainers = async() => {
-    const url = "https://dakotash.github.io/csce242/Projects/part6/json/trainers.json";
+    const url = "dakotash.github.io/csce242/Projects/part6/json/trainers.json";
 
     try {
         const response = await fetch(url);
