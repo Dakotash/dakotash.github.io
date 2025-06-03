@@ -14,12 +14,12 @@ const showTrainers = async() => {
     const trainersDiv = document.getElementById("trainers-content");
 
     trainers.forEach((trainer) => {
-        const trainerSection = document.createElement("section");
+        const trainerSection = document.createElement("div");
         trainersDiv.append(trainerSection);
 
        
         const contentDiv = document.createElement("div");
-        
+        contentDiv.classList.add("trainers-item");
         
         const h3 = document.createElement("h3");
         h3.innerHTML = trainer.name;
@@ -40,8 +40,8 @@ const showTrainers = async() => {
         img.src = trainer.img_name;
         img.alt = trainer.name;
         
-        trainerSection.append(contentDiv);
         trainerSection.append(img);
+        trainerSection.append(contentDiv);
     });
 };
 

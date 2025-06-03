@@ -446,6 +446,16 @@ nav ul a{
     background-color: var(--white);
 }
 
+#trainers-content {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.trainers-item h3{
+    text-align: left;
+}
+
 /* Dynamic Trainers - Only image styling preserved */
 #trainers-content img {
     width: 150px;
@@ -772,7 +782,11 @@ footer p{
         gap: 15px;
     }
 
-    /* Modal responsive adjustments */
+    #trainers-content {
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+
     #modal-content {
         max-width: 100%;
         max-height: 85%;
