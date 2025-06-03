@@ -488,6 +488,73 @@ nav ul a{
     color: #555;
 }
 
+/* Dynamic Trainers Styles */
+#trainers-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#trainers-content section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+#trainers-content section:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+    border-left-color: var(--alt-gold-color);
+}
+
+#trainers-content section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+#trainers-content section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    object-fit: cover;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+#trainers-content section img:hover {
+    transform: scale(1.05);
+    border-color: var(--alt-gold-color);
+}
+
+#trainers-content section div {
+    flex: 1;
+}
+
+#trainers-content section h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: left;
+}
+
+#trainers-content section p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: var(--text-medium);
+}
+
+#trainers-content section p:first-of-type {
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: 18px;
+}
+
 /* Contact Section */
 #contact{
     padding: 60px 0;
@@ -1070,6 +1137,17 @@ footer p{
     .membership-types{
         gap: 40px;
     }
+
+    #trainers-content section {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    #trainers-content section h3 {
+        text-align: center;
+    }
+
 
     .contact-content{
         display: grid; 
