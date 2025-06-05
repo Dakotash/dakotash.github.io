@@ -369,6 +369,101 @@ nav ul a{
     font-weight: 600;
 }
 
+/* Amenities List Item Interactive Styles */
+.amenity-list-item-clickable {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.amenity-list-item-clickable:hover {
+    background-color: #e8f4f8;
+    transform: translateX(10px);
+}
+
+/* Amenity Details Modal Styles */
+.amenity-details-container {
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.amenity-details-title {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.amenity-details-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.amenity-features-heading {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.amenity-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.amenity-feature-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.amenity-feature-item:last-child {
+    border-bottom: none;
+}
+
+.amenity-feature-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--primary-color);
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.amenity-feature-text {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.amenity-details-actions {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.amenity-close-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--alt-gold-color));
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.amenity-close-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+    background: linear-gradient(135deg, var(--alt-gold-color), var(--primary-color));
+}
+
 /* Memberships */
 #memberships{
     padding: 60px 0;
@@ -440,7 +535,6 @@ nav ul a{
     color: #666;
 }
 
-/* Trainers - Minimal Styling (keeping only image styles) */
 #trainers{
     padding: 60px 0;
     background-color: var(--white);
@@ -456,7 +550,6 @@ nav ul a{
     text-align: left;
 }
 
-/* Dynamic Trainers - Only image styling preserved */
 #trainers-content img {
     width: 150px;
     height: 150px;
